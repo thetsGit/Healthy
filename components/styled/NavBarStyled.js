@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const NavBarStyled = styled.nav`
-  // padding: 0.8rem;
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
   padding: 0;
-  position: relative;
   .container {
     display: flex !important;
     align-items: center;
@@ -48,14 +49,14 @@ const NavBarStyled = styled.nav`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: all ease-in 0.3s;
+      transition: all ease-in 0.5s;
       & > ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
         display: flex;
         li:not(last-child) {
-          margin-left: 2rem;
+          margin-left: 3rem;
         }
         & > li {
           a {
@@ -65,21 +66,24 @@ const NavBarStyled = styled.nav`
             display: inline-block;
             &:not(.login,.register):hover {
               color: ${({ theme: { colors } }) => colors.primary};
-              transform: scale(0.9);
+              transform: scale(1.1);
+            }
+            &:hover {
+              text-shadow: 1px 1px 2px #fff;
             }
           }
           .login {
             color: ${({ theme: { colors } }) => colors.secondary};
             &:hover {
               opacity: 0.6 !important;
-              transform: scale(0.9);
+              transform: scale(1.1);
             }
           }
           .register {
             color: ${({ theme: { colors } }) => colors.primary};
             &:hover {
               opacity: 0.6 !important;
-              transform: scale(0.9);
+              transform: scale(1.1);
             }
           }
         }
@@ -92,10 +96,9 @@ const NavBarStyled = styled.nav`
       }
       .nav-links-wrap {
         transform: translateX(-1000px) scale(.2);
-        // display: none;
         opacity: 0;
         z-index: 2;
-        height: 92vh;
+        height: 95vh;
         width: 100%;
         top: 8vh;
         left: 0;
@@ -114,6 +117,8 @@ const NavBarStyled = styled.nav`
         }
       }
       .nav-links-wrap.open {
+        position: fixed;
+        bottom: 0;
         transform: translateX(0) scale(1);
         opacity: 1;
         display: flex;

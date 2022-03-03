@@ -8,7 +8,7 @@ export default function NavBar() {
   const [show, setShow] = useState(false);
   return (
     <NavBarStyled>
-      <ContainerStyled className="container">
+      <ContainerStyled className="container nav">
         <img src={"/images/logo.svg"} alt="a svg healthy logo" id="logo"></img>
         <div className={show ? "nav-links-wrap open" : "nav-links-wrap"}>
           <div className="left"></div>
