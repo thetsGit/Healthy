@@ -7,6 +7,7 @@ const theme = {
     primary: "#6CC57C",
     secondary: "#23233C",
     tertiary: "#7F8DA0",
+    background: "#f2f6ff",
   },
 };
 function MyApp({ Component, pageProps }) {

@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBarStyled from "./styled/NavBarStyled";
 // import Image from "next/image";
 import Link from "next/link";
 import ContainerStyled from "./styled/ContainerStyled";
 
 export default function NavBar() {
+  const [show, setShow] = useState(false);
   return (
     <NavBarStyled>
       <ContainerStyled className="container">
-        <img src={"/images/logo.svg"} alt="healthy logo" id="logo"></img>
-        <div className="nav-links-wrap">
+        <img src={"/images/logo.svg"} alt="a svg healthy logo" id="logo"></img>
+        <div className={show ? "nav-links-wrap open" : "nav-links-wrap"}>
           <div className="left"></div>
           <ul className="middle">
             <li className="nav-item">
@@ -41,7 +42,11 @@ export default function NavBar() {
             </li>
           </ul>
         </div>
-        <div id="menu-btn"></div>
+        <div
+          id="menu-btn"
+          onClick={() => setShow(!show)}
+          className={show ? "open" : ""}
+        ></div>
       </ContainerStyled>
     </NavBarStyled>
   );
