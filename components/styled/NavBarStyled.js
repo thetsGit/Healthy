@@ -6,6 +6,7 @@ const NavBarStyled = styled.nav`
   top: 0;
   z-index: 5;
   padding: 0;
+  // background-color: #fff;
   .container {
     display: flex !important;
     align-items: center;

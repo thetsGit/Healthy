@@ -4,10 +4,9 @@ const ContentBox = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  grid-gap: 1.5rem;
+  grid-gap: 2rem;
   grid-auto-flow: row;
   padding: 3rem 0;
-  // padding-top: 3rem;
   color: ${({ theme: { colors } }) => colors.tertiary};
   & > * {
     margin: 0;
@@ -17,7 +16,7 @@ const ContentBox = styled.div`
   }
   .title {
     font-size: 3rem;
-    line-height: 1em;
+    line-height: 1.2em;
     color: ${({ theme: { colors } }) => colors.secondary};
     .main {
       color: ${({ theme: { colors } }) => colors.primary};
