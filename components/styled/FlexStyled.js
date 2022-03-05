@@ -11,6 +11,13 @@ const FlexStyled = styled.div`
   .image {
     flex-basis: 60%;
   }
+  &.hero {
+    min-height: 700px;
+    @media (max-width: 1050px) {
+      height: auto;
+      flex-direction: column-reverse;
+    }
+  }
 `;
 
 export default FlexStyled;

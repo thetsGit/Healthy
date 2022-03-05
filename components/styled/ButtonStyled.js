@@ -56,6 +56,11 @@ const ButtonStyled = styled.button`
       color: ${({ theme: { colors } }) => colors.primary};
     }
   }
+  // @media (max-width: 1050px) {
+  //   width: 10rem;
+  //   height: 2.5rem;
+  //   font-size: 0.9rem;
+  // }
 `;
 
 export default ButtonStyled;

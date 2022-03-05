@@ -6,7 +6,7 @@ const ContentBox = styled.div`
   width: 100%;
   grid-gap: 2rem;
   grid-auto-flow: row;
-  padding: 3rem 0;
+  padding-top: 8rem;
   color: ${({ theme: { colors } }) => colors.tertiary};
   & > * {
     margin: 0;
@@ -36,6 +36,59 @@ const ContentBox = styled.div`
       margin-left: 1rem;
       width: 1.5rem;
       height: 1.5rem;
+    }
+  }
+  .social-links {
+    margin: 0;
+    margin-top: 5rem;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: ${({
+      theme: {
+        box: { fontsize },
+      },
+    }) => fontsize.normal};
+    & > *:not(li) {
+      margin: 0 0.5rem;
+    }
+    .main {
+      color: ${({ theme: { colors } }) => colors.primary};
+    }
+  }
+  @media (max-width: 1200px) {
+    .snippet {
+      font-size: 1rem;
+    }
+    .title {
+      font-size: 2.5rem;
+    }
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+  @media (max-width: 1200px) {
+    .snippet {
+      font-size: 1rem;
+    }
+    .title {
+      font-size: 2.3rem;
+    }
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+  @media (max-width: 1050px) {
+    padding-top: 2rem;
+    justify-items: center;
+    text-align: center;
+    .snippet {
+      display: none;
+    }
+    .social-links {
+      margin-top: 0;
     }
   }
 `;

@@ -128,6 +128,12 @@ const ResultBoxStyled = styled.section`
         left: -2.5rem;
         bottom: -1.5rem;
         border-radius: 50%;
+        cursor: pointer;
+        outline: 0;
+        border: 0;
+        &:focus {
+          ouline: 0;
+        }
         i {
           font-size: 0.9rem;
         }

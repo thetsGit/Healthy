@@ -4,7 +4,7 @@ const NavBarStyled = styled.nav`
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: 10;
   padding: 0;
   // background-color: #fff;
   .container {
@@ -98,7 +98,7 @@ const NavBarStyled = styled.nav`
       .nav-links-wrap {
         transform: translateX(-1000px) scale(.2);
         opacity: 0;
-        z-index: 2;
+        z-index: 10;
         height: 95vh;
         width: 100%;
         top: 8vh;

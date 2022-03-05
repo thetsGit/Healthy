@@ -9,11 +9,12 @@ import GreenCircle from "../styled/GreenCircle";
 import NutritionBoxStyled from "../styled/NutritionBoxStyled";
 import ResultBoxStyled from "../styled/ResultBoxStyled";
 import MiniCircleStyled from "../styled/miniCircleStyled";
+import RectangleStyled from "../styled/rectangleStyled";
 
 export default function Hero() {
   return (
-    <ContainerStyled>
-      <FlexStyled>
+    <ContainerStyled className="hero">
+      <FlexStyled className="hero">
         <ContentBoxStyled className="content">
           <div className="snippet">
             <BarStyled />
@@ -33,21 +34,38 @@ export default function Hero() {
               <span />
               <span className="text">Download app</span>
             </ButtonStyled>
-            <img
-              src="images/icons/android.svg"
-              className="icon"
-              alt="android logo"
-            ></img>
-            <img
-              src="images/icons/app-store.svg"
-              className="icon"
-              alt="app store logo"
-            ></img>
+            <div>
+              <img
+                src="images/icons/android.svg"
+                className="icon"
+                alt="android logo"
+              ></img>
+              <img
+                src="images/icons/app-store.svg"
+                className="icon"
+                alt="app store logo"
+              ></img>
+            </div>
           </div>
+          <ul className="social-links">
+            <li>
+              <a href="#">Facebook</a>
+            </li>
+            <span>/</span>
+            <li>
+              <a href="#" className="main">
+                Instagram
+              </a>
+            </li>
+            <span>/</span>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+          </ul>
         </ContentBoxStyled>
         <ImageBoxStyled className="image">
           <div className="image-1">
-            <GreenCircle className="green-circle" size="22rem" />
+            <GreenCircle className="green-circle" size="22" />
             <NutritionBoxStyled className="nutrition-box">
               <h3 className="title">Nutritional information</h3>
               <div className="content">
@@ -107,9 +125,9 @@ export default function Hero() {
                 <a href="#" className="know-more">
                   know more
                 </a>
-                <span className="arrow-btn">
+                <button className="arrow-btn">
                   <i className="fa-solid fa-arrow-right"></i>
-                </span>
+                </button>
               </footer>
             </ResultBoxStyled>
             <img
@@ -120,6 +138,7 @@ export default function Hero() {
           </div>
         </ImageBoxStyled>
       </FlexStyled>
+      <RectangleStyled className="rectangle" />
     </ContainerStyled>
   );
 }
