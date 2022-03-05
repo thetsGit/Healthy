@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const RectangleStyled = styled.div`
+const Rectangle = styled.div`
   border-radius: 2rem;
   background: linear-gradient(
     45deg,
@@ -13,4 +13,4 @@ const RectangleStyled = styled.div`
   position: absolute;
 `;
 
-export default RectangleStyled;
+export default Rectangle;

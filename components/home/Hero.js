@@ -1,7 +1,7 @@
 import React from "react";
 import FlexStyled from "../styled/FlexStyled";
 import ContainerStyled from "../styled/ContainerStyled";
-import RectangleStyled from "../styled/rectangleStyled";
+import Rectangle from "../styled/Rectangle";
 import ContentBox from "./hero/ContentBox";
 import ImageBox from "./hero/ImageBox";
 
@@ -12,7 +12,7 @@ export default function Hero() {
         <ContentBox />
         <ImageBox />
       </FlexStyled>
-      <RectangleStyled className="rectangle" />
+      <Rectangle className="rectangle" />
     </ContainerStyled>
   );
 }

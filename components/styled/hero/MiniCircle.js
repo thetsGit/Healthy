@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MiniCircleStyled = styled.div`
+const MiniCircle = styled.div`
   width: 0.3rem;
   height: 0.3rem;
   display: inline-block;
@@ -9,4 +9,4 @@ const MiniCircleStyled = styled.div`
   border-radius: 50%;
 `;
 
-export default MiniCircleStyled;
+export default MiniCircle;
