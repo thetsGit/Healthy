@@ -2,31 +2,31 @@ import styled from "styled-components";
 
 const ImageBoxStyled = styled.section`
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   .sheet {
     border-radius: 50% 50% 1.5rem 1.5rem;
     position: relative;
-    width: 16rem;
-    padding: 4rem 2rem;
-    padding-top: 10rem;
+    width: 13rem;
+    padding: 3rem 2rem;
+    padding-top: 8rem;
     background: linear-gradient(
       to right,
       ${({ theme: { colors } }) => colors.background},
       #fff
     );
     box-shadow: ${({ theme: { shadow } }) => shadow.rightBottom};
-    &:first-child {
-      margin-right: 5rem;
-    }
+    margin-right: 5rem;
     &:nth-child(2) {
       margin-top: 10rem;
     }
     .title {
       font-size: 1.8rem;
-      //   margin: 0;
       line-height: 1em;
       color: ${({ theme: { colors } }) => colors.secondary};
+      @media (max-width: 1200px) {
+        font-size: 1.5rem;
+      }
     }
     .content {
       display: flex;
@@ -45,6 +45,14 @@ const ImageBoxStyled = styled.section`
           color: ${({ theme: { colors } }) => colors.tertiary};
           font-size: 0.8rem;
           margin: 0;
+        }
+        @media (max-width: 1200px) {
+          .amount {
+            font-size: 1rem;
+          }
+          .unit {
+            font-size: 0.6rem;
+          }
         }
       }
     }
@@ -66,20 +74,45 @@ const ImageBoxStyled = styled.section`
       transition: all ease-in 0.3s;
       &:hover {
         transform: translate(30%, 30%) scale(0.9);
-        box-shadow: 0 0 0 #000;
+        // box-shadow: 0 0 0 #000;
       }
       i {
         font-size: 1.5rem;
       }
+      @media (max-width: 1200px) {
+        width: 2.5rem;
+        height: 2.5rem;
+        i {
+          font-size: 1rem;
+        }
+      }
     }
     .image {
       position: absolute;
-      top: -20%;
+      top: -10%;
       width: 90%;
       align-self: center;
       left: 0;
       margin-left: 5%;
     }
+    @media (max-width: 1200px) {
+      width: 11rem;
+      padding-top: 7rem;
+    }
+    @media (max-width: 1050px) {
+      &:nth-child(2) {
+        margin-right: 0 !important;
+      }
+    }
+    @media (max-width: 650px) {
+      width: 15rem;
+      padding-top: 11rem;
+      margin: 0;
+      margin-top: 4rem !important;
+    }
+  }
+  @media (max-width: 650px) {
+    flex-direction: column;
   }
 `;
 

@@ -20,6 +20,9 @@ const FlexStyled = styled.div`
   }
   &.discover {
     padding: 3rem 0;
+    @media (max-width: 1050px) {
+      flex-direction: column;
+    }
   }
 `;
 

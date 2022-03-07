@@ -9,6 +9,9 @@ const ContentBox = styled.section`
   color: ${({ theme: { colors } }) => colors.tertiary};
   &.hero {
     padding-top: 8rem;
+    // @media (max-width: 1050px) {
+    //   padding-top: 3rem;
+    // }
   }
   & > * {
     margin: 0;
@@ -84,11 +87,15 @@ const ContentBox = styled.section`
     }
   }
   @media (max-width: 1050px) {
-    padding-top: 2rem;
+    padding-top: 3rem !important;
     justify-items: center;
     text-align: center;
+    max-width: 600px;
     .snippet {
-      display: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
     }
     .social-links {
       margin-top: 0;
