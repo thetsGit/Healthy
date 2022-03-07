@@ -8,10 +8,10 @@ export default function NutritionBox() {
       <h3 className="title">Nutritional information</h3>
       <div className="content">
         {categories.map((category) => (
-          <span className="each-category" key={category.label}>
+          <section className="each-category" key={category.label}>
             <h4 className={category.main ? "main" : ""}>{category.amount}</h4>
             <span className="mini">{category.label}</span>
-          </span>
+          </section>
         ))}
       </div>
     </NutritionBoxStyled>

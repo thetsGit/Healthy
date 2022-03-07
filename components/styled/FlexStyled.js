@@ -4,7 +4,6 @@ const FlexStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 98vh;
   .content {
     flex-basis: 40%;
   }
@@ -12,11 +11,15 @@ const FlexStyled = styled.div`
     flex-basis: 60%;
   }
   &.hero {
+    height: 98vh;
     min-height: 700px;
     @media (max-width: 1050px) {
       height: auto;
       flex-direction: column-reverse;
     }
+  }
+  &.discover {
+    padding: 3rem 0;
   }
 `;
 

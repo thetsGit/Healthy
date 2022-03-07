@@ -8,7 +8,7 @@ import Snippet from "./ContentBox/Snippet";
 
 export default function ContentBox() {
   return (
-    <ContentBoxStyled className="content">
+    <ContentBoxStyled className="content hero">
       <Snippet />
       <Title />
       <Description />

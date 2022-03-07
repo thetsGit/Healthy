@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
-const ContentBox = styled.div`
+const ContentBox = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
   grid-gap: 2rem;
   grid-auto-flow: row;
-  padding-top: 8rem;
   color: ${({ theme: { colors } }) => colors.tertiary};
+  &.hero {
+    padding-top: 8rem;
+  }
   & > * {
     margin: 0;
   }
@@ -24,6 +26,7 @@ const ContentBox = styled.div`
   }
   .description {
     font-size: 1rem;
+    line-height: 1.5em;
   }
   .action-btns {
     .button {

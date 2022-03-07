@@ -25,6 +25,7 @@ const ResultBoxStyled = styled.section`
             },
           }) => fontsize.lg};
           margin: 0;
+          margin-bottom: 1rem;
         }
         .content {
           display: flex;
@@ -44,7 +45,7 @@ const ResultBoxStyled = styled.section`
             align-items: start;
             flex-direction: column;
             .main {
-              margin-top: 0;
+              margin-top: 0.3rem;
               line-height: 1em;
               color: ${({ theme: { colors } }) => colors.primary};
               font-size: ${({

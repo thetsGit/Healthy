@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ImageBoxStyled = styled.div`
+const ImageBoxStyled = styled.section`
   display: flex;
   width: 100%;
   justify-content: center;

@@ -22,7 +22,7 @@ const NutritionBoxStyled = styled.section`
   .content {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    // align-items: end;
     .each-category {
       h4 {
         font-size: ${({
@@ -32,6 +32,7 @@ const NutritionBoxStyled = styled.section`
         }) => fontsize.lg};
         font-weight: bold;
         margin: 0;
+        margin-bottom: 0.5rem;
         color: ${({ theme: { colors } }) => colors.secondary};
         line-height: 0em;
       }
@@ -40,7 +41,6 @@ const NutritionBoxStyled = styled.section`
       }
       text-align: center;
       .mini {
-        margin-top: 0;
         font-size: ${({
           theme: {
             box: { fontsize },

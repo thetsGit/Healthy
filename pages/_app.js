@@ -15,8 +15,9 @@ const theme = {
     box: "1rem 1.8rem",
   },
   shadow: {
-    sm: "5px 5px 5px 8px #00000002",
-    lg: "0 0 15px 10px #00000010",
+    sm: "5px 5px 8px 5px #00000002",
+    lg: "0 0 20px 10px #00000010",
+    rightBottom: "10px 10px 20px 0 rgba(0, 0, 0, .1)",
   },
   box: {
     fontsize: {
