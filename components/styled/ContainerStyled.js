@@ -16,6 +16,13 @@ const ContainerStyled = styled.div`
       top: 5rem;
     }
   }
+  &.discover {
+    .green-circle {
+      position: absolute;
+      left: -20rem;
+      top: 5rem;
+    }
+  }
   @media (max-width: 900px) {
     & {
       width: 100%;

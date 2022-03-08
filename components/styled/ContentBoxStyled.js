@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ContentBox = styled.section`
+const ContentBoxStyled = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
@@ -103,4 +103,4 @@ const ContentBox = styled.section`
   }
 `;
 
-export default ContentBox;
+export default ContentBoxStyled;
