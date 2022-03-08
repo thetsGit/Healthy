@@ -2,9 +2,9 @@ import React from "react";
 import NutritionBoxStyled from "../../../../styled/NutritionBoxStyled";
 import categories from "./NutritionBox/data";
 
-export default function NutritionBox() {
+export default function NutritionBox({ details }) {
   return (
-    <NutritionBoxStyled className="nutrition-box">
+    <NutritionBoxStyled className={details ? "details" : "nutrition-box"}>
       <h3 className="title">Nutritional information</h3>
       <div className="content">
         {categories.map((category) => (

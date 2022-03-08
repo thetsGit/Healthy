@@ -24,6 +24,13 @@ const FlexStyled = styled.div`
       flex-direction: column;
     }
   }
+  &.details {
+    padding-top: 0;
+    padding-bottom: 3rem;
+    @media (max-width: 1050px) {
+      flex-direction: column-reverse;
+    }
+  }
 `;
 
 export default FlexStyled;

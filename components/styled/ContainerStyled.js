@@ -19,7 +19,7 @@ const ContainerStyled = styled.div`
   &.discover {
     .green-circle {
       position: absolute;
-      left: -20rem;
+      right: -20rem;
       top: 5rem;
     }
   }

@@ -9,9 +9,6 @@ const ContentBoxStyled = styled.section`
   color: ${({ theme: { colors } }) => colors.tertiary};
   &.hero {
     padding-top: 8rem;
-    // @media (max-width: 1050px) {
-    //   padding-top: 3rem;
-    // }
   }
   & > * {
     margin: 0;
