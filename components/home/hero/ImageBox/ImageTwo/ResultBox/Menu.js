@@ -1,5 +1,5 @@
 import React from "react";
-import MiniCircle from "../../../../../styled/hero/miniCircle";
+import MiniCircle from "../../../../../styled/hero/MiniCircle";
 
 export default function Menu() {
   return (

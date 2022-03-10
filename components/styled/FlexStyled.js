@@ -25,8 +25,7 @@ const FlexStyled = styled.div`
     }
   }
   &.details {
-    padding-top: 0;
-    padding-bottom: 3rem;
+    padding: 3rem;
     @media (max-width: 1050px) {
       flex-direction: column-reverse;
     }
