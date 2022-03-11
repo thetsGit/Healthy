@@ -5,7 +5,7 @@ export default function Snippet() {
   return (
     <div className="snippet">
       <BarStyled />
-      <span>The diet app, perfect for you</span>
+      <span>The perfect diet app for you</span>
     </div>
   );
 }
