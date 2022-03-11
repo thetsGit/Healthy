@@ -63,11 +63,7 @@ margin-bottom: 3rem;
         margin-top: 0;
         .me {
             text-decoration: none;
-            color: ${({theme: {colors}}) => colors.tertiary};
-            &:hover {
-                color: ${({theme: {colors}}) => colors.primary};
-                transform: scale(1.1);
-            }
+            color: ${({theme: {colors}}) => colors.primary};
         }
         i {
             font-size: .8rem;

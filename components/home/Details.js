@@ -5,8 +5,8 @@ import ContentBoxStyled from "../styled/ContentBoxStyled";
 import ImageBoxStyled from "../styled/details/ImageBoxStyled";
 import BarStyled from "../styled/BarStyled";
 import NutritionBox from "./hero/ImageBox/ImageOne/NutritionBox";
-import ingredients from "./details/data";
-import Image from "next/image";
+import IngredientsBox from "./details/IngredientsBox";
+import Content from "./details/Content";
 
 export default function Details() {
   return (
@@ -14,29 +14,12 @@ export default function Details() {
       <FlexStyled className="details">
         <ContentBoxStyled className="content">
           <BarStyled />
-          <h2 className="title">
-            <span className="main">Checkout</span> the details of the food
-          </h2>
-          <p className="description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
-            veritatis, sunt minus ea dolorem voluptas sint modi debitis animi
-            maiores maxime dicta suscipit impedit, similique dolor repudiandae,
-            perspiciatis saepe sequi!
-          </p>
+          <Content />
         </ContentBoxStyled>
         <ImageBoxStyled className="image">
           <img className="details-ui" src="images/details.png" alt="" />
           <NutritionBox details={true} />
-          <div className="ingredients-box">
-            {ingredients.map((ingredient) => (
-              <img
-                key={ingredient}
-                src={"/images/ingredients/" + ingredient}
-                alt={ingredient}
-                className="image"
-              />
-            ))}
-          </div>
+          <IngredientsBox />
         </ImageBoxStyled>
       </FlexStyled>
     </ContainerStyled>
