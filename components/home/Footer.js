@@ -28,9 +28,11 @@ export default function Footer() {
                 </ul>
                 <p>
                 <p>
-                    <span><i class="fa-solid fa-less-than"></i> / <i class="fa-solid fa-greater-than"></i> by <a href='https://www.linkedin.com/in/thet-lin-han-0a5693227/' className='me'>Thethan</a></span>
+                    <i>
+                    <span><i class="fa-solid fa-less-than"></i> / <i class="fa-solid fa-greater-than"></i> by <em><a href='https://www.linkedin.com/in/thet-lin-han-0a5693227/' className='me'>Thethan</a></em></span>
                     <br/>
                     <span>&copy; Mao</span>     
+                    </i>
                 </p>
                 </p>
             </div>

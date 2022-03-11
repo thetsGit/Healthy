@@ -42,7 +42,7 @@ margin-bottom: 3rem;
         color: ${({theme: {colors}}) => colors.tertiary};
         font-size: 1.3rem;
         li:not(:first-child) {
-            margin-left: .5rem;
+            margin-left: .7rem;
         }
         * {
             cursor: pointer;
@@ -59,9 +59,10 @@ margin-bottom: 3rem;
 
     p {
         font-weight: bold;
-        color: ${({theme: {colors}}) => colors.secondary};
+        color: ${({theme: {colors}}) => colors.tertiary};
         margin-top: 0;
         .me {
+            text-decoration: none;
             color: ${({theme: {colors}}) => colors.tertiary};
             &:hover {
                 color: ${({theme: {colors}}) => colors.primary};
@@ -69,7 +70,7 @@ margin-bottom: 3rem;
             }
         }
         i {
-            font-size: .7rem;
+            font-size: .8rem;
         }
     }
 }
