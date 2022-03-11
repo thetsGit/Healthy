@@ -19,9 +19,15 @@ const ContentBoxStyled = styled.section`
   .title {
     font-size: 3rem;
     line-height: 1.2em;
+    overflow: hidden;
+    position: relative;
     color: ${({ theme: { colors } }) => colors.secondary};
     .main {
       color: ${({ theme: { colors } }) => colors.primary};
+    }
+    & > * {
+      display: inline-block;
+      position: relative;
     }
   }
   .description {

@@ -14,6 +14,7 @@ const navVariants = {
     transition: {
       type: "spring",
       bounce: 25,
+      delay: 0,
       duration: .3,
       stiffness: 50
     }
