@@ -26,7 +26,6 @@ const ContainerStyled = styled.div`
     .rectangle {
       position: absolute;
       left: -20rem;
-      // top: 5rem;
       transform: rotate(135deg);
     }
   }

@@ -1,12 +1,13 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function SocialLinks() {
   return (
     <div className='social-links'>
         <ul>
-            <li><a href="https://www.linkedin.com/in/thet-lin-han-0a5693227/"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="https://www.facebook.com/thethan13/"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="https://github.com/thetsGit"><i class="fa-brands fa-github"></i></a></li>
+            <li><Link href="https://www.linkedin.com/in/thet-lin-han-0a5693227/"><a><i class="fa-brands fa-linkedin"></i></a></Link></li>
+            <li><Link href="https://www.facebook.com/thethan13/"><a><i class="fa-brands fa-facebook"></i></a></Link></li>
+            <li><Link href="https://github.com/thetsGit"><a><i class="fa-brands fa-github"></i></a></Link></li>
         </ul>
         <p>
         <p>
