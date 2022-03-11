@@ -6,7 +6,7 @@ const NavBarStyled = styled.nav`
   top: 0;
   z-index: 10;
   padding: 0;
-  // background-color: #fff;
+  transition: all ease-in .5s;
   .container {
     display: flex !important;
     align-items: center;
@@ -125,6 +125,10 @@ const NavBarStyled = styled.nav`
         display: flex;
       }
     }
+  }
+  &.filled {
+    background-color: #fff;
+    box-shadow: ${({theme: {shadow}}) => shadow.lg}
   }
 `;
 

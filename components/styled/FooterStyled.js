@@ -22,7 +22,7 @@ margin-bottom: 3rem;
             transform: scale(1.1);
         }
         .main {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: ${({theme: {colors}}) => colors.primary};
         }
         a {
@@ -41,8 +41,8 @@ margin-bottom: 3rem;
         display: flex;
         color: ${({theme: {colors}}) => colors.tertiary};
         font-size: 1.3rem;
-        *:not(last-child) {
-            margin-right: .5rem;
+        li:not(:first-child) {
+            margin-left: .5rem;
         }
         * {
             cursor: pointer;
@@ -52,18 +52,24 @@ margin-bottom: 3rem;
                 transform: scale(1.1);
             }
         }
+        @media (max-width: 1050px) {
+            justify-content: center;
+        }
     }
 
     p {
         font-weight: bold;
-        color: ${({theme: {colors}}) => colors.tertiary};
+        color: ${({theme: {colors}}) => colors.secondary};
         margin-top: 0;
         .me {
-            color: ${({theme: {colors}}) => colors.secondary};
+            color: ${({theme: {colors}}) => colors.tertiary};
             &:hover {
                 color: ${({theme: {colors}}) => colors.primary};
                 transform: scale(1.1);
             }
+        }
+        i {
+            font-size: .7rem;
         }
     }
 }

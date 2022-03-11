@@ -11,16 +11,20 @@ export default function Action() {
         <span className="text">Download app</span>
       </ButtonStyled>
       <div>
+        <a href="#">
         <img
           src="images/icons/android.svg"
           className="icon"
           alt="android logo"
         ></img>
+        </a>
+        <a href="#">
         <img
           src="images/icons/app-store.svg"
           className="icon"
           alt="app store logo"
         ></img>
+        </a>
       </div>
     </div>
   );
