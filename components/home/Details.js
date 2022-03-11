@@ -17,7 +17,7 @@ export default function Details() {
           <Content />
         </ContentBoxStyled>
         <ImageBoxStyled className="image">
-          <img className="details-ui" src="images/details.png" alt="" />
+          <img className="details-ui" src="images/details.png" alt="details mobile ui" />
           <NutritionBox details={true} />
           <IngredientsBox />
         </ImageBoxStyled>
