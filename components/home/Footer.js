@@ -2,24 +2,17 @@ import React from 'react';
 import ContainerStyled from "../styled/ContainerStyled"
 import FooterStyled from '../styled/FooterStyled';
 import Rectangle from "../styled/Rectangle"
+import contactData from './footer/data/contact';
+import termsData from './footer/data/terms';
+import ListLinks from './footer/ListLinks';
 
 export default function Footer() {
   return (
     <ContainerStyled className='footer'>
         <FooterStyled>
             <img src='images/logo.svg' className='logo' alt="logo svg" />
-            <ul className='list-links'>
-                <li className='main'><span className='main'>Healthy</span></li>
-                <li><a href="#">benefits</a></li>
-                <li><a href="#">credits</a></li>
-                <li><a href="#">contact</a></li>
-                
-            </ul>
-            <ul className='list-links'>
-                <li><a href="#">about us</a></li>
-                <li><a href="#">terms and conditions</a></li>
-                <li><a href="#">privacy notice</a></li>
-            </ul>
+            <ListLinks data={contactData} />
+            <ListLinks data={termsData} />
             <div className='social-links'>
                 <ul>
                     <li><a href="https://www.linkedin.com/in/thet-lin-han-0a5693227/"><i class="fa-brands fa-linkedin"></i></a></li>

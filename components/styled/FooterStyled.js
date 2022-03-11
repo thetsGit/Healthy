@@ -21,7 +21,7 @@ margin-bottom: 3rem;
             color: ${({theme: {colors}}) => colors.primary};
             transform: scale(1.1);
         }
-        .main {
+        &.main {
             font-size: 1.2rem;
             color: ${({theme: {colors}}) => colors.primary};
         }
