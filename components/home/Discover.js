@@ -4,7 +4,7 @@ import FlexStyled from "../styled/FlexStyled";
 import ContentBox from "./discover/ContentBox";
 import ImageBox from "./discover/ImageBox";
 import GreenCircle from "../styled/GreenCircle";
-import Rectangle from "../styled/Rectangle"
+import Rectangle from "../styled/Rectangle";
 
 export default function Discover() {
   return (

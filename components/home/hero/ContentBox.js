@@ -1,11 +1,12 @@
-import React, {useRef} from "react";
+import React, {useRef, useEffect} from "react";
 import ContentBoxStyled from "../../styled/ContentBoxStyled";
 import Title from "./ContentBox/Title";
 import Description from "./ContentBox/Description";
 import Action from "./ContentBox/Action";
 import Social from "./ContentBox/Social";
 import Snippet from "./ContentBox/Snippet";
-import { motion } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
+import {useInView} from "react-intersection-observer";
 
 const parentVariants = {
   initial: {
@@ -42,11 +43,19 @@ export default function ContentBox() {
   const description = useRef(null);
   const action = useRef(null);
   const social = useRef(null);
+  const controls = useAnimation();
+  const [ref, inView] = useInView({threshold: 1});
+
+  useEffect(() => {
+    inView ? controls.start("final") : 0;
+  
+  }, [controls, inView])
+  
 
   return (
-    <ContentBoxStyled className="content hero" as={motion.section} variants={parentVariants} initial="initial" animate="final">
+    <ContentBoxStyled ref={ref} className="content hero" as={motion.section} variants={parentVariants} initial="initial" animate={controls}>
       <Snippet variants={childVariants} ref={snippet} />
-      <Title ref={title} />
+      <Title />
       <Description variants={childVariants} ref={description} />
       <Action variants={childVariants} ref={action} />
       <Social variants={childVariants} ref={social} />

@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const titleVariants = {
   initial: {y: 0},
@@ -29,8 +31,15 @@ const wordVariants = {
 }
 
 export default function Title() {
+  const controls = useAnimation();
+  const {ref, inView} = useInView({threshold: 1});
+
+  useEffect(() => {
+    inView ? controls.start("final") : 0;
+  }, [controls, inView])
+  
   return (
-    <motion.h2 variants={titleVariants} initial="initial" animate="final" className="title">
+    <motion.h2 variants={titleVariants} animate={controls} initial="initial" className="title" ref={ref}>
       <motion.span variants={wordVariants} className="main">Delicious</motion.span>{" "}<motion.span variants={wordVariants}>healthy</motion.span>{" "}<motion.span variants={wordVariants}>recipes</motion.span>{" "}<motion.span variants={wordVariants}>for</motion.span>{" "}<motion.span variants={wordVariants}>you</motion.span>
     </motion.h2>
   );

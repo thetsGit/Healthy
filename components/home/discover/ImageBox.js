@@ -1,16 +1,70 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ImageBoxStyled from "../../styled/discover/ImageBoxStyled";
 import dishes from "./data/dishes";
+import { m, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
+const textBoxVariants = {
+  initial: {
+    scale: 0,
+    opacity: 0
+  },
+  final: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: .1,
+      type: "spring",
+      stiffness: 50
+    }
+  }
+}
+
+const arrowVariants = {
+  initial: {
+    scale: 0,
+    translateY: "30%",
+    translateX: "30%",
+    rotate: "360deg"
+  },
+  final: {
+    scale: 1,
+    rotate: 0
+  }
+}
+
+const dishVariants = {
+  initial: {
+    scale: 0,
+    rotate: "360deg"
+  },
+  final: {
+    scale: 1,
+    rotate: 0
+  }
+}
 
 export default function ImageBox() {
+  const [ref, inView] = useInView({threshold: 1});
+  const controls = useAnimation();
+
+  useEffect(() => {
+    inView ? controls.start("final") : 0;
+ 
+  }, [inView, controls]);
+  
+
   return (
     <ImageBoxStyled className="image">
       {dishes.map((dish) => (
-        <div className="sheet" key={dish.name}>
-          <img
+        <motion.div className="sheet" key={dish.name} variants={textBoxVariants} initial="initial" animate={controls} ref={ref}>
+          <motion.img
             src={"/images/" + dish.image}
             className="image"
             alt={dish.image}
+            variants={dishVariants}
           />
           <h2 className="title">{dish.name}</h2>
           <div className="content">
@@ -25,10 +79,10 @@ export default function ImageBox() {
               </div>
             ))}
           </div>
-          <div className="arrow">
+          <motion.div className="arrow" variants={arrowVariants}>
             <i className="fa-solid fa-arrow-right-long"></i>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       ))}
     </ImageBoxStyled>
   );

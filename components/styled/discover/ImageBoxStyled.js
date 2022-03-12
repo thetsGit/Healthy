@@ -94,6 +94,7 @@ const ImageBoxStyled = styled.section`
       align-self: center;
       left: 0;
       margin-left: 5%;
+      display: inline-block;
     }
     @media (max-width: 1200px) {
       width: 11rem;
