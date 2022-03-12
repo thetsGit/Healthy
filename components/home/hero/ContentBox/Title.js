@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import { motion } from "framer-motion";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import wordVariants from "../../../../variants/wordVariants";
 
 const titleVariants = {
   initial: {y: 0},
@@ -11,21 +12,6 @@ const titleVariants = {
       duration: .1,
       when: "beforeChildren",
       staggerChildren: .1
-    }
-  }
-}
-
-const wordVariants = {
-  initial: {
-    opacity: 0,
-    y: 100
-  },
-  final: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 50
     }
   }
 }
