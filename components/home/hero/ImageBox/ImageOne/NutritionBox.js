@@ -1,10 +1,12 @@
 import React from "react";
+import { forwardRef } from "react/cjs/react.production.min";
 import NutritionBoxStyled from "../../../../styled/NutritionBoxStyled";
 import categories from "./NutritionBox/data";
+import { motion } from "framer-motion";
 
-export default function NutritionBox({ details }) {
+const NutritionBox = forwardRef(function NutritionBox(props, ref) {
   return (
-    <NutritionBoxStyled className={details ? "details" : "nutrition-box"}>
+    <NutritionBoxStyled className={props.details ? "details" : "nutrition-box"} ref={ref}>
       <h3 className="title">Nutritional information</h3>
       <div className="content">
         {categories.map((category) => (
@@ -16,4 +18,6 @@ export default function NutritionBox({ details }) {
       </div>
     </NutritionBoxStyled>
   );
-}
+});
+
+export default motion(NutritionBox, {forwardMotionProps: true});
