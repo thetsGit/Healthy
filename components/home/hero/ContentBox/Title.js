@@ -1,13 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { keyframes } from "styled-components";
 
 const titleVariants = {
   initial: {y: 0},
   final: {
     y: 0,
     transition: {
-      duration: 2,
+      duration: .1,
       when: "beforeChildren",
       staggerChildren: .1
     }

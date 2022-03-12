@@ -1,9 +1,10 @@
-import React from "react";
+import { motion } from "framer-motion";
+import React, {forwardRef} from "react";
 import ButtonStyled from "../../../styled/hero/ButtonStyled";
 
-export default function Action() {
+const Action = forwardRef(function (props, ref) {
   return (
-    <div className="action-btns">
+    <div className="action-btns" ref={ref}>
       <ButtonStyled className="button">
         <span />
         <span />
@@ -28,4 +29,7 @@ export default function Action() {
       </div>
     </div>
   );
-}
+});
+
+export default motion(Action, { forwardMotionProps: true })
+

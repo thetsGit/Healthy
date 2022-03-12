@@ -1,8 +1,10 @@
 import React from "react";
+import { forwardRef } from "react/cjs/react.production.min";
+import { motion } from "framer-motion";
 
-export default function Social() {
+const Social = forwardRef(function Social(props, ref) {
   return (
-    <ul className="social-links">
+    <ul className="social-links" ref={ref}>
       <li>
         <a href="#">Facebook</a>
       </li>
@@ -18,4 +20,6 @@ export default function Social() {
       </li>
     </ul>
   );
-}
+});
+
+export default motion(Social, {forwardMotionProps: true});

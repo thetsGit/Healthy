@@ -1,11 +1,15 @@
 import React from "react";
+import { forwardRef } from "react/cjs/react.production.min";
 import BarStyled from "../../../styled/BarStyled";
+import { motion } from "framer-motion";
 
-export default function Snippet() {
+const Snippet = forwardRef(function Snippet(props, ref) {
   return (
-    <div className="snippet">
+    <div className="snippet" ref={ref}>
       <BarStyled />
       <span>The perfect diet app for you</span>
     </div>
   );
-}
+});
+
+export default motion(Snippet, {forwardMotionProps: true});
