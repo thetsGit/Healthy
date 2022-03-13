@@ -19,7 +19,7 @@ const ingredientVariants = {
 
 export default function IngredientsBox() {
   return (
-    <div className="ingredients-box">
+    <motion.div className="ingredients-box" variants={templateVariants}>
         {ingredients.map((ingredient) => (
             <motion.img
             key={ingredient}
@@ -29,6 +29,6 @@ export default function IngredientsBox() {
             variants={ingredientVariants}
             />
         ))}
-    </div>
+    </motion.div>
   )
 }

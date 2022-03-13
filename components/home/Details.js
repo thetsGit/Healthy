@@ -38,7 +38,7 @@ export default function Details() {
   return (
     <ContainerStyled className="details">
       <FlexStyled className="details">       
-          <Content />
+        <Content />
         <ImageBoxStyled className="image" as={motion.div} ref={ref} variants={templateVariants} initial="initial" animate={controls}>
           <motion.img className="details-ui" src="images/details.png" alt="details mobile ui" variants={boxVariants} />
           <NutritionBox details={true} ref={boxRef} variants={boxVariants} />
