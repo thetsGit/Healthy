@@ -29,7 +29,7 @@ const ImageBoxStyled = styled.section`
       left: 50%;
       top: 50%;
       @media (max-width: 1050px) {
-        transform: translate(-50%, -50%) scale(2);
+        display: none;
       }
     }
     .nutrition-box {
@@ -52,7 +52,7 @@ const ImageBoxStyled = styled.section`
       @media (max-width: 600px) {
         left: 3rem;
         top: 2rem;
-        transform: scale(0.5);
+        transform: scale(0.6) !important;
       }
     }
   }
@@ -78,7 +78,7 @@ const ImageBoxStyled = styled.section`
         bottom: 3rem;
       }
       @media (max-width: 600px) {
-        transform: scale(0.5);
+        transform: scale(0.6) !important;
         bottom: 1rem;
       }
     }
