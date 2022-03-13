@@ -1,9 +1,8 @@
 import React, {useEffect} from "react";
 import ImageBoxStyled from "../../styled/discover/ImageBoxStyled";
 import dishes from "./data/dishes";
-import { m, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import useView from "../../../hooks/useView";
 
 const textBoxVariants = {
   initial: {
@@ -47,15 +46,8 @@ const dishVariants = {
 }
 
 export default function ImageBox() {
-  const [ref, inView] = useInView({threshold: 1});
-  const controls = useAnimation();
-
-  useEffect(() => {
-    inView ? controls.start("final") : 0;
- 
-  }, [inView, controls]);
+  const [controls, ref] = useView();
   
-
   return (
     <ImageBoxStyled className="image">
       {dishes.map((dish) => (

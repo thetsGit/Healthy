@@ -1,23 +1,15 @@
-import React, {useEffect} from "react";
+import React from "react";
 import ContentBoxStyled from "../../styled/ContentBoxStyled";
 import BarStyled from "../../styled/BarStyled";
 import { motion } from "framer-motion";
 import wordVariants from "../../../variants/wordVariants";
-import { useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import childVariants from "../../../variants/contentTextVariants";
 import templateVariants from "../../../variants/templateVariants";
+import useView from "../../../hooks/useView";
 
 export default function ContentBox() {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({threshold: 1});
-
-  useEffect(() => {
-    inView ? controls.start("final") : 0;
-
-  }, [controls, inView])
+  const [controls, ref] = useView(); 
   
-
   return (
     <ContentBoxStyled as={motion.section} className="content" variants={templateVariants} initial="initial" animate={controls} ref={ref}>
       <BarStyled as={motion.div} variants={childVariants}/>
