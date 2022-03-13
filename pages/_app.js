@@ -32,11 +32,8 @@ const theme = {
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
+  useEffect(() => {   
       setLoading(true);
-    }, 2000);
-  
   }, [])
   
 
@@ -45,7 +42,7 @@ function MyApp({ Component, pageProps }) {
       {
         loading ? 
         (
-          <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
           <NavBar />
           <Component {...pageProps} />
         </ThemeProvider>
