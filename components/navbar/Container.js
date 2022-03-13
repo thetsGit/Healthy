@@ -7,7 +7,7 @@ export default  memo( function Container() {
 
   return (
     <ContainerStyled className="container nav">
-      <img src={"/images/logo.svg"} alt="a svg healthy logo" id="logo"></img>
+      <Link href="#hero"><a><img src={"/images/logo.svg"} alt="a svg healthy logo" id="logo"></img></a></Link>
       <div className={show ? "nav-links-wrap open" : "nav-links-wrap"}>
       <div className="left"></div>
       <ul className="middle">
