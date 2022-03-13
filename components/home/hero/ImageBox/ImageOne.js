@@ -1,10 +1,10 @@
 import React, {useRef} from "react";
-import GreenCircle from "../../../styled/GreenCircle";
+import GreenCircle from "@/styled/GreenCircle";
 import NutritionBox from "./ImageOne/NutritionBox";
 import LoginImage from "./ImageOne/LoginImage";
 import { motion } from "framer-motion";
-import useView from "../../../../hooks/useView";
-import templateVariants from "../../../../variants/templateVariants";
+import useView from "@/hooks/useView";
+import templateVariants from "@/variants/templateVariants";
 
 const circleVariants = {
   initial: {

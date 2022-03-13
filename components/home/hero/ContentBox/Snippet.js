@@ -1,6 +1,5 @@
-import React from "react";
-import { forwardRef } from "react/cjs/react.production.min";
-import BarStyled from "../../../styled/BarStyled";
+import React, { forwardRef } from "react";
+import BarStyled from "@/styled/BarStyled";
 import { motion } from "framer-motion";
 
 const Snippet = forwardRef(function Snippet(props, ref) {

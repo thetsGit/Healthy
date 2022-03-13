@@ -1,13 +1,13 @@
 import React, {useRef, useEffect} from "react";
-import ContentBoxStyled from "../../styled/ContentBoxStyled";
+import ContentBoxStyled from "@/styled/ContentBoxStyled";
 import Title from "./ContentBox/Title";
 import Description from "./ContentBox/Description";
 import Action from "./ContentBox/Action";
 import Social from "./ContentBox/Social";
 import Snippet from "./ContentBox/Snippet";
 import { motion } from "framer-motion";
-import childVariants from "../../../variants/contentTextVariants";
-import useView from "../../../hooks/useView";
+import childVariants from "@/variants/contentTextVariants";
+import useView from "@/hooks/useView";
 
 const parentVariants = {
   initial: {

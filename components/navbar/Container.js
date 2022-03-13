@@ -1,5 +1,5 @@
 import React, {memo, useState} from 'react'
-import ContainerStyled from "../styled/ContainerStyled";
+import ContainerStyled from "@/styled/ContainerStyled";
 import Link from 'next/link';
 
 export default  memo( function Container() {

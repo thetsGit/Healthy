@@ -1,6 +1,6 @@
 import React from "react";
 import { forwardRef } from "react/cjs/react.production.min";
-import NutritionBoxStyled from "../../../../styled/NutritionBoxStyled";
+import NutritionBoxStyled from "@/styled/NutritionBoxStyled";
 import categories from "./NutritionBox/data";
 import { motion } from "framer-motion";
 

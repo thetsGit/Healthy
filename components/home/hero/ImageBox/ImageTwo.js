@@ -1,8 +1,8 @@
 import React, {useRef} from "react";
 import ResultBox from "./ImageTwo/ResultBox";
 import HomeImage from "./ImageTwo/HomeImage";
-import templateVariants from "../../../../variants/templateVariants";
-import useView from "../../../../hooks/useView";
+import templateVariants from "@/variants/templateVariants";
+import useView from "@/hooks/useView";
 import { motion } from "framer-motion";
 
 const imageVariants = {

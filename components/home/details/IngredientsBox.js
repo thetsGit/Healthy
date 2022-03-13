@@ -1,7 +1,7 @@
 import React from 'react'
 import ingredients from './data'
 import { motion } from 'framer-motion'
-import templateVariants from '../../../variants/templateVariants'
+import templateVariants from '@/variants/templateVariants'
 
 const ingredientVariants = {
   initial: {

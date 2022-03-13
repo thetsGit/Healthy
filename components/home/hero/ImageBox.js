@@ -1,5 +1,5 @@
 import React from "react";
-import ImageBoxStyled from "../../styled/hero/ImageBoxStyled";
+import ImageBoxStyled from "@/styled/hero/ImageBoxStyled";
 import ImageOne from "./ImageBox/ImageOne";
 import ImageTwo from "./ImageBox/ImageTwo";
 

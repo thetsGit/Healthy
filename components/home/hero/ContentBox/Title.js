@@ -1,8 +1,8 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import wordVariants from "../../../../variants/wordVariants";
+import wordVariants from "@/variants/wordVariants";
 
 const titleVariants = {
   initial: {y: 0},

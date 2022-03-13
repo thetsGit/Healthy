@@ -1,11 +1,11 @@
 import React from "react";
-import ContentBoxStyled from "../../styled/ContentBoxStyled";
-import BarStyled from "../../styled/BarStyled";
+import ContentBoxStyled from "@/styled/ContentBoxStyled";
+import BarStyled from "@/styled/BarStyled";
 import { motion } from "framer-motion";
-import wordVariants from "../../../variants/wordVariants";
-import childVariants from "../../../variants/contentTextVariants";
-import templateVariants from "../../../variants/templateVariants";
-import useView from "../../../hooks/useView";
+import wordVariants from "@/variants/wordVariants";
+import childVariants from "@/variants/contentTextVariants";
+import templateVariants from "@/variants/templateVariants";
+import useView from "@/hooks/useView";
 
 export default function ContentBox() {
   const [controls, ref] = useView(); 

@@ -1,11 +1,11 @@
 import React from 'react'
-import BarStyled from '../../styled/BarStyled'
+import BarStyled from '@/styled/BarStyled'
 import { motion } from 'framer-motion'
-import childVariants from '../../../variants/contentTextVariants'
-import templateVariants from '../../../variants/templateVariants'
-import wordVariants from '../../../variants/wordVariants'
-import useView from "../../../hooks/useView"
-import ContentBoxStyled from '../../styled/ContentBoxStyled'
+import childVariants from '@/variants/contentTextVariants'
+import templateVariants from '@/variants/templateVariants'
+import wordVariants from '@/variants/wordVariants'
+import useView from "@/hooks/useView"
+import ContentBoxStyled from '@/styled/ContentBoxStyled'
 
 export default function Content() {
   const [controls, ref] = useView();

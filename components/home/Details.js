@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
-import ContainerStyled from "../styled/ContainerStyled";
-import FlexStyled from "../styled/FlexStyled";
-import ImageBoxStyled from "../styled/details/ImageBoxStyled";
+import ContainerStyled from "@/styled/ContainerStyled";
+import FlexStyled from "@/styled/FlexStyled";
+import ImageBoxStyled from "@/styled/details/ImageBoxStyled";
 import NutritionBox from "./hero/ImageBox/ImageOne/NutritionBox";
 import IngredientsBox from "./details/IngredientsBox";
 import Content from "./details/Content";
-import useView from "../../hooks/useView";
-import templateVariants from "../../variants/templateVariants";
+import useView from "@/hooks/useView";
+import templateVariants from "@/variants/templateVariants";
 import { motion } from "framer-motion";
 
 const imageVariants = {

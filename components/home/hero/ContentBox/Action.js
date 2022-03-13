@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import React, {forwardRef} from "react";
-import ButtonStyled from "../../../styled/hero/ButtonStyled";
+import React, { forwardRef } from "react";
+import ButtonStyled from "@/styled/hero/ButtonStyled";
 
 const Action = forwardRef(function (props, ref) {
   return (

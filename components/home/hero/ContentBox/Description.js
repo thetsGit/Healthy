@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
-import { forwardRef } from "react/cjs/react.production.min";
+import React, { forwardRef } from "react";
 
 const Description = forwardRef(function Description(props, ref) {
   return (

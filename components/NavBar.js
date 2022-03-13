@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import NavBarStyled from "./styled/NavBarStyled";
+import NavBarStyled from "@/styled/NavBarStyled";
 import Container from "./navbar/Container";
 
 export default function NavBar() {

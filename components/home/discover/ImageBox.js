@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
-import ImageBoxStyled from "../../styled/discover/ImageBoxStyled";
+import ImageBoxStyled from "@/styled/discover/ImageBoxStyled";
 import dishes from "./data/dishes";
 import { motion } from "framer-motion";
-import useView from "../../../hooks/useView";
+import useView from "@/hooks/useView";
 
 const textBoxVariants = {
   initial: {

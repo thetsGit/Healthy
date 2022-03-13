@@ -1,5 +1,5 @@
 import React from "react";
-import ResultBoxStyled from "../../../../styled/ResultBoxStyled";
+import ResultBoxStyled from "@/styled/ResultBoxStyled";
 import Menu from "./ResultBox/Menu";
 import Content from "./ResultBox/Content";
 import Footer from "./ResultBox/Footer";
