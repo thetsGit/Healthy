@@ -6,7 +6,6 @@ export default function NavBar() {
   const [filled, setFilled] = useState(false);
 
   const scrollHandler = () => {
-    console.log("invoked", window.pageYOffset);
     window.pageYOffset > 50 ? setFilled(true) : setFilled(false);
   }
 

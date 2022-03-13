@@ -56,7 +56,7 @@ export default function ImageOne() {
 
   return (
     <motion.div className="image-1" ref={ref} variants={templateVariants} initial="initial" animate={controls}>
-      <GreenCircle className="green-circle" size="22" variants={circleVariants} />
+      <GreenCircle as={motion.div} className="green-circle" size="22" variants={circleVariants} />
       <NutritionBox variants={boxVariants} ref={nutritionBoxRef} />
       <LoginImage variants={imageVariants} ref={loginImageRef} />
     </motion.div>
