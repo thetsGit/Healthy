@@ -29,7 +29,6 @@ const ImageBoxStyled = styled.section`
       left: 50%;
       top: 50%;
       @media (max-width: 1050px) {
-        // display: none;
         transform: translate(-50%, -50%) scale(2);
       }
     }

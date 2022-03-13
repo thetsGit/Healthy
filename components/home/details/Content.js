@@ -5,12 +5,13 @@ import childVariants from '../../../variants/contentTextVariants'
 import templateVariants from '../../../variants/templateVariants'
 import wordVariants from '../../../variants/wordVariants'
 import useView from "../../../hooks/useView"
+import ContentBoxStyled from '../../styled/ContentBoxStyled'
 
 export default function Content() {
   const [controls, ref] = useView();
 
   return (
-    <motion.div variants={templateVariants} initial="initial" animate={controls} ref={ref}> 
+    <ContentBoxStyled className='content' as={motion.section} variants={templateVariants} initial="initial" animate={controls} ref={ref}> 
         <BarStyled as={motion.div} variants={childVariants}/>
         <h2 className="title">
             <motion.span className="main" variants={wordVariants}>Checkout</motion.span>{" "}
@@ -26,6 +27,6 @@ export default function Content() {
             maiores maxime dicta suscipit impedit, similique dolor repudiandae,
             perspiciatis saepe sequi!
         </motion.p>
-    </motion.div>
+    </ContentBoxStyled>
   )
 }

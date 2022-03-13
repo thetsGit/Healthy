@@ -8,6 +8,7 @@ const ImageBoxStyled = styled.section`
   padding-left: 7rem;
   .details-ui {
     position: absolute;
+    display: inline-block;
     width: 20rem;
     right: 10.5rem;
     @media (max-width: 600px) {

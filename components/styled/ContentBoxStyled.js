@@ -91,7 +91,7 @@ const ContentBoxStyled = styled.section`
   }
   @media (max-width: 1050px) {
     padding-top: 3rem !important;
-    justify-items: center;
+    justify-items: center !important;
     text-align: center;
     max-width: 600px;
     .snippet {
