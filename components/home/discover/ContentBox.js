@@ -6,20 +6,7 @@ import wordVariants from "../../../variants/wordVariants";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import childVariants from "../../../variants/contentTextVariants";
-
-const templateVariants = {
-  initial: {
-    opacity: 0
-  },
-  final: {
-    opacity: 1,
-    transition: {
-      delay: .8,
-      when: "beforeChildren", 
-      staggerChildren: .1
-    }
-  }
-}
+import templateVariants from "../../../variants/templateVariants";
 
 export default function ContentBox() {
   const controls = useAnimation();

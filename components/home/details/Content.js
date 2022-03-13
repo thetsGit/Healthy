@@ -1,17 +1,33 @@
 import React from 'react'
+import BarStyled from '../../styled/BarStyled'
+import { motion } from 'framer-motion'
+import childVariants from '../../../variants/contentTextVariants'
+import templateVariants from '../../../variants/templateVariants'
+import { useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import wordVariants from '../../../variants/wordVariants'
 
 export default function Content() {
+  const {ref, inView} = useInView({threshold: 1});
+  const controls = useAnimation();
+
   return (
-    <>
-        <h2 className="title">
-            <span className="main">Checkout</span> the details of the food
+    <motion.div variants={templateVariants} initial="initial" animate={controls} ref={ref}> 
+        <BarStyled as={motion.div} variants={childVariants}/>
+        <h2 className="title" variants={templateVariants}>
+            <motion.span className="main" variants={wordVariants}>Checkout</motion.span>{" "}
+            <motion.span variants={wordVariants}>the</motion.span>{" "}
+            <motion.span variants={wordVariants}>details</motion.span>{" "}
+            <motion.span variants={wordVariants}>of</motion.span>{" "}
+            <motion.span variants={wordVariants}>the</motion.span>{" "}
+            <motion.span variants={wordVariants}>food</motion.span>
         </h2>
-        <p className="description">
+        <motion.p className="description" variants={childVariants}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
             veritatis, sunt minus ea dolorem voluptas sint modi debitis animi
             maiores maxime dicta suscipit impedit, similique dolor repudiandae,
             perspiciatis saepe sequi!
-        </p>
-    </>
+        </motion.p>
+    </motion.div>
   )
 }
