@@ -13,9 +13,14 @@ export default function ContentBox() {
   return (
     <ContentBoxStyled as={motion.section} className="content" variants={templateVariants} initial="initial" animate={controls} ref={ref}>
       <BarStyled as={motion.div} variants={childVariants}/>
-      <motion.h2 className="title" variants={templateVariants}>
-        <motion.span className="main" variants={wordVariants}>Discover</motion.span>{" "}<motion.span variants={wordVariants}>how</motion.span>{" "}<motion.span variants={wordVariants}>to</motion.span>{" "}<motion.span variants={wordVariants}>create</motion.span>{" "}<motion.span variants={wordVariants}>healthy</motion.span>{" "}<motion.span variants={wordVariants}>food</motion.span>
-      </motion.h2>
+      <h2 className="title">
+        <motion.span className="main" variants={wordVariants}>Discover</motion.span>{" "}
+        <motion.span variants={wordVariants}>how</motion.span>{" "}
+        <motion.span variants={wordVariants}>to</motion.span>{" "}
+        <motion.span variants={wordVariants}>create</motion.span>{" "}
+        <motion.span variants={wordVariants}>healthy</motion.span>{" "}
+        <motion.span variants={wordVariants}>food</motion.span>
+      </h2>
       <motion.p className="description" variants={childVariants}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas
         accumsan odio, cursus laoreet mauris porttitor non. Aliquam eu neque

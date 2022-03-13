@@ -71,7 +71,7 @@ export default function ImageBox() {
               </div>
             ))}
           </div>
-          <motion.div className="arrow" variants={arrowVariants}>
+          <motion.div className="arrow" variants={arrowVariants} whileHover={{opacity: .8, transition: {duration: .1}}}>
             <i className="fa-solid fa-arrow-right-long"></i>
           </motion.div>
         </motion.div>
