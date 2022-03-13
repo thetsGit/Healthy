@@ -1,6 +1,9 @@
 import React, {useRef} from "react";
 import ResultBox from "./ImageTwo/ResultBox";
 import HomeImage from "./ImageTwo/HomeImage";
+import templateVariants from "../../../../variants/templateVariants";
+import useView from "../../../../hooks/useView";
+import { motion } from "framer-motion";
 
 const imageVariants = {
   initial: {
@@ -11,7 +14,7 @@ const imageVariants = {
       opacity: 1,
       translateY: 0,
       transition: {
-          delay: 1.4
+          delay: .4
       }
   }
 }
@@ -25,7 +28,7 @@ const boxVariants = {
     opacity: 1,
     translateX: 0,
     transition: {
-      delay: 1.4
+      delay: .4
     }
   }
 }
@@ -33,11 +36,12 @@ const boxVariants = {
 export default function ImageTwo() {
   const boxRef = useRef(null);
   const imageRef = useRef(null);
+  const [controls, ref] = useView();
 
   return (
-    <div className="image-2">
-      <ResultBox ref={boxRef} variants={boxVariants} initial="initial" animate="final" />
-      <HomeImage ref={imageRef} variants={imageVariants} initial="initial" animate="final" />
-    </div>
+    <motion.div className="image-2" ref={ref} variants={templateVariants} initial="initial" animate={controls}>
+      <ResultBox ref={boxRef} variants={boxVariants} />
+      <HomeImage ref={imageRef} variants={imageVariants} />
+    </motion.div>
   );
 }

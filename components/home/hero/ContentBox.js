@@ -5,9 +5,9 @@ import Description from "./ContentBox/Description";
 import Action from "./ContentBox/Action";
 import Social from "./ContentBox/Social";
 import Snippet from "./ContentBox/Snippet";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import childVariants from "../../../variants/contentTextVariants";
+import useView from "../../../hooks/useView";
 
 const parentVariants = {
   initial: {
@@ -28,13 +28,7 @@ export default function ContentBox() {
   const description = useRef(null);
   const action = useRef(null);
   const social = useRef(null);
-  const controls = useAnimation();
-  const [ref, inView] = useInView({threshold: 1});
-
-  useEffect(() => {
-    inView ? controls.start("final") : 0;
-  
-  }, [controls, inView])
+  const [controls, ref] = useView();
   
 
   return (

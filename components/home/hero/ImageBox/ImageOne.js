@@ -3,6 +3,8 @@ import GreenCircle from "../../../styled/GreenCircle";
 import NutritionBox from "./ImageOne/NutritionBox";
 import LoginImage from "./ImageOne/LoginImage";
 import { motion } from "framer-motion";
+import useView from "../../../../hooks/useView";
+import templateVariants from "../../../../variants/templateVariants";
 
 const circleVariants = {
   initial: {
@@ -13,7 +15,6 @@ const circleVariants = {
   final: {
     scale: 1,
     transition: {
-      delay: 1,
       type: "spring",
       stiffness: 50
     }
@@ -29,7 +30,7 @@ const imageVariants = {
       opacity: 1,
       translateY: 0,
       transition: {
-          delay: 1.4
+        delay: .4
       }
   }
 }
@@ -43,7 +44,7 @@ const boxVariants = {
     opacity: 1,
     translateX: 0,
     transition: {
-      delay: 1.4
+      delay: .4
     }
   }
 }
@@ -51,12 +52,13 @@ const boxVariants = {
 export default function ImageOne() {
   const nutritionBoxRef = useRef(null);
   const loginImageRef = useRef(null);
+  const [controls, ref] = useView();
 
   return (
-    <div className="image-1">
-      <GreenCircle className="green-circle" size="22" as={motion.div} variants={circleVariants} initial="initial" animate="final" />
-      <NutritionBox variants={boxVariants} initial="initial" animate="final" ref={nutritionBoxRef} />
-      <LoginImage variants={imageVariants} initial="initial" animate="final" ref={loginImageRef} />
-    </div>
+    <motion.div className="image-1" ref={ref} variants={templateVariants} initial="initial" animate={controls}>
+      <GreenCircle className="green-circle" size="22" as={motion.div} variants={circleVariants} />
+      <NutritionBox variants={boxVariants} ref={nutritionBoxRef} />
+      <LoginImage variants={imageVariants} ref={loginImageRef} />
+    </motion.div>
   );
 }
