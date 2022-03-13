@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import NavBar from "../components/NavBar";
 import { ThemeProvider } from "styled-components";
+import { useEffect, useState } from "react";
+import LoadingIndicator from "components/home/LoadingIndicator";
 
 const theme = {
   colors: {
@@ -27,12 +29,30 @@ const theme = {
     },
   },
 };
+
 function MyApp({ Component, pageProps }) {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 2000);
+  
+  }, [])
+  
+
   return (
-    <ThemeProvider theme={theme}>
-      <NavBar />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+      {
+        loading ? 
+        (
+          <ThemeProvider theme={theme}>
+          <NavBar />
+          <Component {...pageProps} />
+        </ThemeProvider>
+        ) : 
+        <LoadingIndicator />
+      }
+    </>
   );
 }
 
