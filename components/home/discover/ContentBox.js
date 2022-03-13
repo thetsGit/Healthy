@@ -5,11 +5,19 @@ import { motion } from "framer-motion";
 import wordVariants from "../../../variants/wordVariants";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import childVariants from "../../../variants/contentTextVariants";
 
 const templateVariants = {
-  initial: {},
+  initial: {
+    opacity: 0
+  },
   final: {
-    transition: {when: "beforeChildren", staggerChildren: .1}
+    opacity: 1,
+    transition: {
+      delay: .8,
+      when: "beforeChildren", 
+      staggerChildren: .1
+    }
   }
 }
 
@@ -25,15 +33,15 @@ export default function ContentBox() {
 
   return (
     <ContentBoxStyled as={motion.section} className="content" variants={templateVariants} initial="initial" animate={controls} ref={ref}>
-      <BarStyled />
+      <BarStyled as={motion.div} variants={childVariants}/>
       <motion.h2 className="title" variants={templateVariants}>
         <motion.span className="main" variants={wordVariants}>Discover</motion.span>{" "}<motion.span variants={wordVariants}>how</motion.span>{" "}<motion.span variants={wordVariants}>to</motion.span>{" "}<motion.span variants={wordVariants}>create</motion.span>{" "}<motion.span variants={wordVariants}>healthy</motion.span>{" "}<motion.span variants={wordVariants}>food</motion.span>
       </motion.h2>
-      <p className="description">
+      <motion.p className="description" variants={childVariants}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas
         accumsan odio, cursus laoreet mauris porttitor non. Aliquam eu neque
         nibh. Aenean non pellentesque justo.
-      </p>
+      </motion.p>
     </ContentBoxStyled>
   );
 }
