@@ -7,7 +7,7 @@ export default function Footer() {
       <a href="#" className="know-more">
         know more
       </a>
-      <button className="arrow-btn" ariaLabel="arrow button">
+      <button className="arrow-btn" aria-label="arrow button">
         <i className="fa-solid fa-arrow-right"></i>
       </button>
     </footer>
