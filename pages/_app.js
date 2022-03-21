@@ -9,7 +9,7 @@ const theme = {
     primary: "#6CC57C",
     secondary: "#23233C",
     tertiary: "#7F8DA0",
-    background: "#F2F6FF",
+    background: "#fff",
     special: "#EE6A6E",
     lightblue: "#DCEBF5",
   },
