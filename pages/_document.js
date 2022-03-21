@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <link
           rel="stylesheet"
@@ -10,6 +10,8 @@ export default function Document() {
           integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
           crossOrigin="anonymous"
         />
+        <title>Healthy App</title>
+        <meta name="description" content="Your health partner - Healthy app"/>
       </Head>
       <body>
         <Main />
