@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const HiddenText = styled.span`
-    display: hidden;
+    display: none;
 `;
 
 export default HiddenText;
