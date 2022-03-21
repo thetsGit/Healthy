@@ -1,13 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
+import HiddenText from 'components/styled/hiddenText'
 
 export default function SocialLinks() {
   return (
     <div className='social-links'>
         <ul>
-            <li><Link href="https://www.linkedin.com/in/thet-lin-han-0a5693227/"><a><i className="fa-brands fa-linkedin"></i></a></Link></li>
-            <li><Link href="https://www.facebook.com/thethan13/"><a><i className="fa-brands fa-facebook"></i></a></Link></li>
-            <li><Link href="https://github.com/thetsGit"><a><i className="fa-brands fa-github"></i></a></Link></li>
+            <li><Link href="https://www.linkedin.com/in/thet-lin-han-0a5693227/"><a><HiddenText>linkedin icon</HiddenText><i className="fa-brands fa-linkedin"></i></a></Link></li>
+            <li><Link href="https://www.facebook.com/thethan13/"><a><HiddenText>facebook icon</HiddenText><i className="fa-brands fa-facebook"></i></a></Link></li>
+            <li><Link href="https://github.com/thetsGit"><a><HiddenText>github icon</HiddenText><i className="fa-brands fa-github"></i></a></Link></li>
         </ul>
         <p>     
             <i>

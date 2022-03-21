@@ -1,4 +1,5 @@
 import React from "react";
+import HiddenText from "components/styled/hiddenText";
 
 export default function Footer() {
   return (
@@ -8,6 +9,7 @@ export default function Footer() {
         know more
       </a>
       <button className="arrow-btn" name="result box arrow btn">
+        <HiddenText>Arrow Button</HiddenText>
         <i className="fa-solid fa-arrow-right"></i>
       </button>
     </footer>
